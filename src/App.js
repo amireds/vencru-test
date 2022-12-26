@@ -20,6 +20,10 @@ import {
   Settings,
   Search,
 } from "feather-icons-react";
+import FeatureCard from "./components/sidebar/FeatureCard";
+import { ReactComponent as LogoBar } from "./assets/icons/LogoIcon.svg";
+import { ReactComponent as VisaIcon } from "./assets/icons/VisaIcon.svg";
+import { ReactComponent as MasterIcon } from "./assets/icons/MasterIcon.svg";
 
 const navigation = [
   { name: "Home", href: "#", icon: Home, current: true, isDivider: true },
@@ -443,11 +447,7 @@ function App() {
         <div className="flex-1 flex flex-col min-h-0 border-r border-gray-200 bg-white">
           <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
             <div className="flex items-center flex-shrink-0 px-4">
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-logo-purple-600-mark-gray-800-text.svg"
-                alt="Workflow"
-              />
+              <LogoBar className="h-8 w-auto" />
             </div>
             {/* Sidebar Search */}
             <div className="px-3 mt-5">
@@ -468,7 +468,7 @@ function App() {
                   type="text"
                   name="search"
                   id="search"
-                  className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-9 sm:text-sm border-gray-300 rounded-md"
+                  className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-9 sm:text-sm border-gray-300 rounded-md font-light"
                   placeholder="Search"
                 />
               </div>
@@ -515,27 +515,7 @@ function App() {
               ))}
             </nav>
             <div className="flex-1 flex items-start justify-center px-4">
-              <div className="bg-gray-50 py-4 px-4 w-full rounded">
-                <div className="font-medium text-sm text-gray-900">
-                  New features available!
-                </div>
-                <div className="text-sm text-gray-500 pb-3 pt-1 font-normal">
-                  Check out the new dashboard view. Pages now load faster
-                </div>
-                <img
-                  src="https://images.unsplash.com/photo-1605925575028-eb8b33197733?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80"
-                  className="rounded-md w-full object-cover object-center h-[136px] cursor-pointer"
-                  alt="new feature"
-                />
-                <div className="flex items-center justify-start space-x-2 text-sm font-medium">
-                  <span className="text-gray-500 cursor-pointer py-3">
-                    Dismiss
-                  </span>
-                  <span className="text-purple-700 cursor-pointer py-3">
-                    What's new?
-                  </span>
-                </div>
-              </div>
+              <FeatureCard />
             </div>
           </div>
           <div className="flex-shrink-0 flex items-start justify-between border-t border-gray-200 mx-4 py-4">
@@ -728,7 +708,9 @@ function App() {
                                   }
                                 >
                                   <div className="flex justify-start items-start">
-                                    <div className="bg-gray-300 w-10 h-6 rounded" />
+                                    <div className="bg-white w-10 h-6 rounded justify-center flex items-center border border-gray-100">
+                                      <VisaIcon className="" />
+                                    </div>
                                     <div className="ml-3 text-xs space-y-0.5">
                                       <div
                                         className={
@@ -781,7 +763,9 @@ function App() {
                                   }
                                 >
                                   <div className="flex justify-start items-start">
-                                    <div className="bg-gray-300 w-10 h-6 rounded" />
+                                    <div className="bg-white w-10 h-6 rounded justify-center flex items-center border border-gray-100">
+                                      <MasterIcon className="" />
+                                    </div>
                                     <div className="ml-3 text-xs space-y-0.5">
                                       <div
                                         className={
