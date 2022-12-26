@@ -22,7 +22,7 @@ function App() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Vencru | Settings</title>
-        <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
+        <link rel="icon" href="./assets/favicon.png" />
       </Helmet>
       <MobileSidebar
         setSidebarOpen={setSidebarOpen}
