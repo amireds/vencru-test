@@ -269,3 +269,15 @@ export const plans = [
   },
   // More Plans...
 ];
+
+export const tabBtn = [
+  { name: "Details", link: "#" },
+  { name: "Profile", link: "#" },
+  { name: "Password", link: "#" },
+  { name: "Team", link: "#" },
+  { name: "Plan", link: "#" },
+  { name: "Billing", link: "#" },
+  { name: "Notifications", link: "#" },
+  { name: "Integrations", link: "#" },
+  { name: "API", link: "#" },
+];
