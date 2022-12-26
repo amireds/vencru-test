@@ -9,6 +9,8 @@ import {
   Users,
   Key,
 } from "feather-icons-react";
+import { ReactComponent as VisaIcon } from "../assets/icons/VisaIcon.svg";
+import { ReactComponent as MasterIcon } from "../assets/icons/MasterIcon.svg";
 
 export const navigation = [
   { name: "Home", href: "#", icon: Home, current: true, isDivider: true },
@@ -280,4 +282,35 @@ export const tabBtn = [
   { name: "Notifications", link: "#" },
   { name: "Integrations", link: "#" },
   { name: "API", link: "#" },
+];
+
+export const emailType = [
+  {
+    id: 1,
+    label: "Send to my account email",
+    subLabel: "olivia@untitledui.com",
+    value: "main",
+  },
+  {
+    id: 2,
+    label: "Send to an alternative email",
+    value: "alternative",
+  },
+];
+
+export const CardType = [
+  {
+    id: 1,
+    value: "visa",
+    icon: VisaIcon,
+    topText: "Visa ending in 1234",
+    exp: "Expiry 06/2024",
+  },
+  {
+    id: 1,
+    value: "master",
+    icon: MasterIcon,
+    topText: "Mastercard ending in 1234",
+    exp: "Expiry 06/2024",
+  },
 ];
