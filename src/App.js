@@ -10,6 +10,7 @@ import EmailSelector from "./components/main/EmailSelector";
 import DescTitle from "./components/main/DescTitle";
 import CardSelector from "./components/main/CardSelector";
 import BillingSection from "./components/main/BillingSection";
+import { Helmet } from "react-helmet";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -18,6 +19,11 @@ function App() {
 
   return (
     <div className="subpixel-antialiased">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Vencru | Settings</title>
+        <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
+      </Helmet>
       <MobileSidebar
         setSidebarOpen={setSidebarOpen}
         sidebarOpen={sidebarOpen}
